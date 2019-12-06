@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!--head-->
+{block name="head"}{include file="public:head"}{/block}
+<!--扩展css引入-->
+{block name="extend_css"}{/block}
+</head>
+
+<body>
+
+    <!-- 左侧菜单区 -->
+    {include file="public/menu" /}
+
+    <!-- 右侧内容区 -->
+    <div id="right-panel" class="right-panel">
+
+        <!-- 头部信息 -->
+        {include file="public/header" /}
+
+        <!-- 面包屑导航 -->
+        {include file="public/nav" /}
+
+        <!-- 内容主体区域 -->
+        <div class="content">
+            {block name="content"}{/block}
+        </div>
+
+        <div class="clearfix"></div>
+
+        {block name="footer"}{include file="public/footer"}{/block}
+
+
+    </div>
+
+
+    <!--基础js载入区-->
+    {block name="load_js"}
+
+
+
+    <script src="{$domain}/admin_static/assets/js/jquery.min.js"></script>
+    <script src="{$domain}/admin_static/assets/js/jquery.matchHeight.min.js"></script>
+    <script src="{$domain}/admin_static/assets/js/popper.min.js"></script>
+    <script src="{$domain}/admin_static/assets/js/bootstrap.min.js"></script>
+    <script src="{$domain}/admin_static/assets/js/jquery.matchHeight.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js"></script>
+    <script src="{$domain}/admin_static/assets/js/laydate/laydate.js"></script>
+    <script src="{$domain}/admin_static/assets/js/lib/chosen/chosen.jquery.min.js"></script>
+    <!--<script src="{$domain}/admin_static/assets/js/main.js"></script>-->
+
+    {/block}
+    <!--扩展js载入区-->
+    {block name="extend_js"}{/block}
+
+</body>
+
+</html>
